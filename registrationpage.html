@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Registration</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			function validatePassword(){
+				var pass1=document.getElementById("passwd").value;
+				var pass2=document.getElementById("conpasswd").value;
+				if(pass1!=pass2)
+					document.getElementById("conpasswd").setCustomValidity("Passwords Don't Match");
+				return false;
+				else
+					document.getElementById("conpasswd").setCustomValidity('');	
+			}
+		</script>
+	</head>
+	
+	 <body>
+ 	    <div class="container">
+		<legend>Registration</legend>
+		<div class="well">
+      	<form id="signup" name = "edo" class="form-horizontal" method="post" action="http://moodle2015.msitprogram.net/" onsubmit = "return validatePassword()">
+
+			<div class="control-group">
+		        
+				<div class="controls">
+					<label class="control-label">First Name:</label>
+				    <div class="input-prepend">
+					<span class="add-on"><i class="icon-user"></i></span>
+						<input type="text" class="input-xlarge" id="fname" placeholder="First Name" name="fname" required>
+					</div>
+				</div>
+			</div>
+
+			<div class="control-group ">
+		        
+				<div class="controls">
+					<label class="control-label">Last Name:</label>
+				    <div class="input-prepend">
+					<span class="add-on"><i class="icon-user"></i></span>
+						<input type="text" class="input-xlarge" id="lname" name="lname" required placeholder="Last Name">
+					</div>
+				</div>
+			</div>
+
+			<div class="control-group">
+		 
+				<div class="controls">
+						<br>Gender : <input type = "radio" name = "gender" value = "Male" required> Male
+						<input type = "radio" name = "gender" value = "Female" required>Female<br/>
+				</div>
+			</div>
+
+			
+			<div class="control-group">
+		        <label class="control-label">Email</label>
+				<div class="controls">
+				    <div class="input-prepend">
+					<span class="add-on"><i class="icon-envelope"></i></span>
+						<input type="email" class="input-xlarge" id="email" name="email" required placeholder="Email" data-error = "Type valid mail id">
+					</div>
+				</div>
+			</div>
+
+			<div class="control-group ">
+		        <label class="control-label">User Name</label>
+				<div class="controls">
+				    <div class="input-prepend">
+					<span class="add-on"><i class="icon-user"></i></span>
+						<input type="text" class="input-xlarge" id="uname" name="uname" required placeholder="User Name">
+					</div>
+				</div>
+			</div>
+
+				<div class="control-group">
+			        <label class="control-label">Password</label>
+					<div class="controls">
+					    <div class="input-prepend">
+						<span class="add-on"><i class="icon-lock"></i></span>
+							<input type="Password" id="passwd" class="input-xlarge" name="passwd" placeholder="Password">
+						</div>
+					</div>
+				</div>
+				<div class="control-group">
+			        <label class="control-label">Confirm Password</label>
+					<div class="controls">
+					    <div class="input-prepend">
+						<span class="add-on"><i class="icon-lock"></i></span>
+							<input type="Password" id="conpasswd" class="input-xlarge" name="conpasswd" placeholder="Re-enter Password">
+						</div>
+					</div>
+				</div
+			<div class="form-group">
+			    <div class="checkbox">
+			      <label>
+			        <input type="checkbox" id="terms" data-error="Before you wreck yourself" required>
+			        Check yourself
+			      </label>
+			      <div class="help-block with-errors"></div>
+			    </div>
+			</div>
+
+			<div class="control-group">
+		       <button type="submit" class="btn btn-success">Create My Account</button>
+		    </div>
+		    </div>
+	    </form>
+		</div>
+		</div>
+	</body>
+</html>
