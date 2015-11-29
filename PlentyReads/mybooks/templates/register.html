@@ -1,0 +1,128 @@
+<title> PlentyReads Registration
+</title>
+    
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'mybooks/bootstrap.min.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'mybooks/isotope.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'mybooks/jquery.fancybox.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'mybooks/loginandsignup.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'mybooks/da-slider.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'mybooks/styles.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'mybooks/owl.carousel.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'mybooks/font-awesome.min.css' %}" />
+
+ <script src="{% static 'mybooks/js/modernizr-latest.js' %}"></script>
+    <script src="{% static 'mybooks/js/jquery-1.8.2.min.js' %}"></script>
+    <script src="{% static 'mybooks/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'mybooks/js/jquery.isotope.min.js' %}"></script>
+    <script src="{% static 'mybooks/js/fancybox/jquery.fancybox.pack.js' %}"></script>
+    <script src="{% static 'mybooks/js/jquery.nav.js' %}"></script>
+    <script src="{% static 'mybooks/js/jquery.cslider.js' %}"></script>
+    <script src="{% static 'mybooks/js/custom.js' %}"></script>
+    <script src="{% static 'mybooks/js/owl-carousel/owl.carousel.js' %}"></script>
+    <script src="{% static 'mybooks/js/loginandsignup.js' %}"></script>
+
+{% block content %}
+
+    <header class="header">
+
+        <div class="container">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand scroll-top logo"><b>PlentyReads</b></a>
+                </div>
+                <!--/.navbar-header-->
+              
+                <!--/.navbar-collapse-->
+            </nav>
+            <!--/.navbar-->
+        </div>
+        <!--/.container-->
+    </header>
+    <!--/.header-->
+    
+ 
+  
+    <section id="loginandsignup" class="page-section section appear clearfix">
+        <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="panel panel-login">
+            <div class="panel-heading">
+              <div class="row">
+                <div>
+                  <a href="#" id="register-form-link">Register</a>
+                </div>
+              </div>
+              <hr>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-lg-12">
+
+                  {% if form.errors %}
+                  <p>Your username and password didn't match. Please try again.</p>
+                  {% endif %}
+                
+
+                        <form id="register-form" action="." method="post" role="form" >{% csrf_token %}
+                 
+                      <div class="form-group">
+                          <label> UserName</label>
+                       <!--  <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" required> -->
+                        {{ form.username }} 
+                      </div>
+                      <div class="form-group">
+                      	<label> Email</label>
+                        <!-- <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="" required> -->
+                         {{ form.email }}  
+                      </div>
+                       <div class="form-group">
+                       		<label>Password</label>
+                       <!--  <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required> -->
+                        {{ form.password1 }}  
+                      </div>
+                      <div class="form-group">
+                      	<label>Confirm Password</label>
+                       <!--  <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password" required> -->
+                        {{ form.password2 }}  
+                      </div> 
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-sm-6 col-sm-offset-3">
+                            <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                     <a href="/">Login</a>
+        
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> 
+
+
+    
+    <!--[if lte IE 8]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><![endif]-->
+   
+
+
+
+{% endblock %}
+
+
+
+
