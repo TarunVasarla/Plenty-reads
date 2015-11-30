@@ -1,0 +1,13 @@
+.greetUser{
+	width:50%;
+	float:right;
+}
+.searchButton{
+	width:50%;
+}
+.searchGreet{
+	display:flex;
+}
+.bookList{
+	background-color: black;
+}
