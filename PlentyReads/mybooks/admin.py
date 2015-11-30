@@ -1,5 +1,5 @@
 from django.contrib import admin
-
+from .models import Book, User,genreType,wishlist,ReadHistory
  # bookid = models.IntegerField(default=0)
  #    bookname = models.CharField(max_length=200)
  #    preface = models.CharField(max_length=4000)
@@ -10,7 +10,6 @@ from django.contrib import admin
  #    genre = models.IntegerField(default=0)
 
 # Register your models here.
-from .models import Book, User,genreType,wishlist,ReadHistory
 # class ChoiceInline(admin.TabularInline):
 #     model = Choice
 #     extra = 3
@@ -76,6 +75,7 @@ class wishlistAdmin(admin.ModelAdmin):
     search_fields = ['userid']
 
 
+        
 
 admin.site.register(genreType, genreTypeAdmin)
 admin.site.register(Book, BookAdmin)
