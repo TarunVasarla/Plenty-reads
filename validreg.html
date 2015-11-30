@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="validreg.css">
+    <script src="validreg.js"></script>
+    
+  </head>
+  <body>
+<!-- Validate Plugin -->
+  <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+  
+  <div class="row">
+      <div class="col-md-6">
+          
+      </div>
+       <div class="col-md-6">
+           <form class="form-horizontal" id="register" name="register">
+                <fieldset>
+                
+                <!-- Form Name -->
+                <h3 align="center">Registration with form Validation</h3>
+                
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="firstname">First Name</label>  
+                  <div class="col-md-6">
+                  <input id="firstname" name="firstname" type="text" placeholder="First Name" class="form-control input-md">
+                  </div>
+                </div>
+                
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="lastname">Last Name</label>  
+                  <div class="col-md-6">
+                  <input id="lastname" name="lastname" type="text" placeholder="Last Name" class="form-control input-md">
+                  </div>
+                </div>
+                
+                <!-- Password input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="password">Password</label>
+                  <div class="col-md-6">
+                    <input id="password" name="password" type="password" placeholder="Password" class="form-control input-md">
+                  </div>
+                </div>
+                
+                <!-- Button (Double) -->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="submit"></label>
+                  <div class="col-md-8">
+                    <button id="submit" name="submit" class="btn btn-success">Register</button>
+                    <button id="reset" name="reset" type="reset" class="btn btn-danger">Reset</button>
+                  </div>
+                </div>
+                
+                </fieldset>
+            </form>
+      </div>
+  </div>
+  </body>
+  </html>
+  
+ 

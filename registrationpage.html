@@ -4,7 +4,9 @@
 		<meta charset="utf-8">
 		<title>Registration</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="F:\softwares\bootstrap-3.3.5-dist\css\bootstrap.css" rel="stylesheet">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script type="text/javascript">
 			function validatePassword(){
 				var pass1=document.getElementById("passwd").value;
@@ -25,8 +27,9 @@
       	<form id="signup" name = "edo" class="form-horizontal" method="post" action="http://moodle2015.msitprogram.net/" onsubmit = "return validatePassword()">
 
 			<div class="control-group">
-		        <label class="control-label">First Name</label>
+		        
 				<div class="controls">
+					<label class="control-label">First Name:</label>
 				    <div class="input-prepend">
 					<span class="add-on"><i class="icon-user"></i></span>
 						<input type="text" class="input-xlarge" id="fname" placeholder="First Name" name="fname" required>
@@ -35,8 +38,9 @@
 			</div>
 
 			<div class="control-group ">
-		        <label class="control-label">Last Name</label>
+		        
 				<div class="controls">
+					<label class="control-label">Last Name:</label>
 				    <div class="input-prepend">
 					<span class="add-on"><i class="icon-user"></i></span>
 						<input type="text" class="input-xlarge" id="lname" name="lname" required placeholder="Last Name">
@@ -45,7 +49,7 @@
 			</div>
 
 			<div class="control-group">
-		        <label class="control-label" required>Gender</label>
+		 
 				<div class="controls">
 						<br>Gender : <input type = "radio" name = "gender" value = "Male" required> Male
 						<input type = "radio" name = "gender" value = "Female" required>Female<br/>

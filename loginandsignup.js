@@ -1,5 +1,12 @@
-$(function() {
 
+$(function() {
+	$("#register").click(function(e) {
+		var password = $("#password").val();
+		var cpassword = $("#confirm-password").val();
+		if (!(password).match(cpassword)) {
+			alert("Your passwords don't match. Try again?");
+		}
+	});
     $('#login-form-link').click(function(e) {
 		$("#login-form").delay(100).fadeIn(100);
  		$("#register-form").fadeOut(100);
@@ -16,3 +23,4 @@ $(function() {
 	});
 
 });
+
