@@ -311,11 +311,12 @@
           <div class="panel panel-login">
             <div class="panel-heading">
               <div class="row">
-                <div class="col-xs-6">
-                  <a href="#" class="active" id="login-form-link">Login</a>
+                <div class="col-xs-6" >
+                  <a href="#" class="active" style = "font-size : 25pt" id="login-form-link">Login</a>
                 </div>
                 <div class="col-xs-6">
-                  <a href="#" id="register-form-link">Register</a>
+                  <!-- <a href="#" id="register-form-link">Register</a> -->
+                  <a href="/register" class="active" style = "font-size : 25pt">Register</a>
                 </div>
               </div>
               <hr>
@@ -329,24 +330,44 @@
                   {% endif %}
                   <form name="login" id="login-form" action="." method="post" role="form" style="display: block;">{% csrf_token %}
                       
-                      <div class="form-group">
-                      <!--   <input type="text" name="username" id="username" tabindex="1" class="form-control input-md" placeholder="Username" value="" required> -->
-                        {{ form.username }}
+                     <!--  <table >
+                          <tr>
+                              <td><label style = "color : green" >UserName&nbsp&nbsp</label></td>
+                              <td><label >{{ form.username }}</label></td>
+                          </tr>
+                          <tr>
+                            <td><label style = "color : green" style = "padding-top : 15pt">Password&nbsp&nbsp</label></td>
+                            <td><label>{{ form.password }}</label></td>
+                          </tr>
+                      </table> -->
+                       <div class="form-group" style = "font-size : 25pt" >
+                        <!-- <input type="text" name="username" id="username" tabindex="2" class="form-control" placeholder="Username" value="" required> -->
+                         <table >
+                          <tr>
+                              <td><label style = "color : green" >UserName&nbsp&nbsp</label></td>
+                              <td><label >{{ form.username }}</label></td>
+                          </tr>
+                          <tr>
+                            <td><label style = "color : green" style = "padding-top : 15pt">Password&nbsp&nbsp</label></td>
+                            <td><label>{{ form.password }}</label></td>
+                          </tr>
+                      </table>
+                      
                       </div>
                       
-                      <div class="form-group">
-                        <!-- <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" value="" required> -->
+                      <!-- <div class="form-group">
+                        <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" value="" required>
                        {{ form.password }} 
-                      </div>
+                      </div> -->
                       
-                      <div class="form-group text-center">
+                      <!-- <div class="form-group text-center">
                         <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
                         <label for="remember"> Remember Me</label>
-                      </div>
+                      </div> -->
                       <div class="form-group">
                         <div class="row">
-                          <div class="col-sm-6 col-sm-offset-3">
-                            <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In" >
+                          <div class="col-sm-6 col-sm-offset-3" style = "padding-top : 15pt">
+                            <input type="submit"  name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In" >
                           </div>
                         </div>
                       </div>
@@ -354,14 +375,14 @@
                         <div class="row">
                           <div class="col-lg-12">
                             <div class="text-center">
-                              <a href="http://" tabindex="5" class="forgot-password">Forgot Password?</a>
+                              <!-- <a href="http://" tabindex="5" class="forgot-password">Forgot Password?</a> -->
                             </div>
                           </div>
                         </div>
                       </div>
                       <input type="hidden" name="next" value="/home" />
                     </form>
-                     <a href="/register">Register</a>
+                     <!-- <a href="/register">Register</a> -->
                   <table border="0">
         
 
