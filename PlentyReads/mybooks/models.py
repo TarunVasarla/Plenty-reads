@@ -6,14 +6,21 @@ from django.core.files.storage import FileSystemStorage
 from django.contrib.auth.models import BaseUserManager
 
 from pdfminer.converter import HTMLConverter
-# from pdfminer.pdfinterp import PDFResourceManager, process_pdf
-from pdfminer.pdfinterp import PDFResourceManager
+from pdfminer.pdfinterp import PDFResourceManager, process_pdf
+
 from pdfminer.layout import LAParams
 import hashlib
 import urllib
 import sys
+import os
 
-from pdfminer.pdfpage import PDFPage
+from django.conf import settings 
+# from pdfminer.pdfpage import PDFPage
+
+
+import sys
+reload(sys)
+sys.setdefaultencoding("utf-8")
 
 
 class genreType(models.Model):
@@ -39,9 +46,9 @@ class Book(models.Model):
 
 class User(models.Model):
   id = models.AutoField(primary_key=True)
-  name = models.CharField(max_length=200)
-  email = models.CharField(max_length=4000)
-  password = models.CharField(max_length=200)
+  name = models.CharField(max_length=50)
+  email = models.CharField(max_length=100,unique=True)
+  password = models.CharField(max_length=30)
   ActiveYN  = models.CharField(max_length=1,default='Y')
   create_date = models.DateTimeField(default=datetime.datetime.now())
 
@@ -79,7 +86,7 @@ class Pdf(models.Model):
         @staticmethod
         def fromUrl(url):
             try:
-                pdf=Pdf.objects.get(id=Pdf.getId(url))
+                pdf=Pdf.objects.get(id=Pdf.__getId(url))
             except Pdf.DoesNotExist:
                 pdf=Pdf()
                 pdf.id=None
@@ -95,7 +102,7 @@ class Pdf(models.Model):
         
         def save(self):
             if self.id==None:
-                self.id=self.getId(self.url)
+                self.id=self.__getId(self.url)
             super(Pdf,self).save()
         
         @staticmethod
@@ -107,7 +114,7 @@ class Html(models.Model):
     content=models.TextField()
         
     def write(self, text):
-        self.content+=text
+        self.content += text
         
     def toString(self):
         return self.content
@@ -128,15 +135,28 @@ class   PdfManager():
         self.__pdf=pdf
         
     def outToHtml(self, html):
-        pdfFile=file(self.pdf.getPath(), 'rb')
+        # pdf   File=file('C:/Python27/Scripts/PlentyReads/mybooks/uploads/4ABSLIST_OF_FIGABBREVATIONS.pdf', 'rb')
+        # self.__pdf.getPath()
+        # # path = settings.MEDIA_URL+Pdf.objects.get(id=Pdf.__getId(self.))
+        # pdfFile=file(path ,'rb')
+    
+
+        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        MEDIA_ROOT = os.path.join(BASE_DIR,'mybooks\\')
+
+        pdfFile=file(MEDIA_ROOT + str(self.__pdf.url), 'rb')
         rsrcmgr = PDFResourceManager(caching=self.caching)
         device = HTMLConverter(rsrcmgr, html, codec=self.codec, 
                                scale=self.scale,layoutmode=self.layoutmode, 
-                               laparams=self.laparams, outdir=self.outdir)
-        
-        get_pages(rsrcmgr, device, pdfFile, self.pagenos, maxpages=self.maxpages, password=self.password,
-                    caching=self.caching, check_extractable=True)
+                               # laparams=self.laparams, outdir=self.outdir)
+                               laparams=self.laparams)
+        process_pdf(rsrcmgr, device, pdfFile, self.pagenos, maxpages=self.maxpages, password=self.password,
+                          caching=self.caching, check_extractable=True)
+        # PDFPage.get_pages(fp=pdfFile, maxpages=self.maxpages, 
+        #                   pagenos=self.pagenos, password=self.password, caching=self.caching, 
+        #                   check_extractable=True)
         pdfFile.close()
-        html.pdf=self.pdf
+        # html.pdf=self.pdf
         
         return html
+

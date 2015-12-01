@@ -13,6 +13,8 @@ urlpatterns = [
     )),
     # url('^accounts/', include('django.contrib.auth.urls')),
     url(r'^$', views.SearchView.as_view(), name='search'),
+    # url(r'^$', views.ProfileView.as_view(), name='profile'),
+   
     # url(r'^$',  'mybooks.views.RegisterView'),
     # url(r'^(?P<pk>[0-9]+)/ /$',  views.LandingView.as_view(), name='landingPage'),
 

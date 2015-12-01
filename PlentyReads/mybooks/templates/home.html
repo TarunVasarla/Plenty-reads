@@ -9,32 +9,59 @@
   		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
   	</head>
-	<body>
+
+    <header class="header">
+
+        <div class="container" style = "color : white">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <!-- <div class="navbar-header">
+                    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div> -->
+                    <a href="#" class="navbar-brand scroll-top logo" style = "font-size : 50pt ; color : white"><b>PlentyReads</b></a>
+            </nav>
+        </div>
+    </header>
+
+	<!-- <body background ="{% static 'mybooks/images/ipad-ebooks.jpg' %}" alt="banner"> -->
+	<body style = "background-color: black">
 		<div class="first">
 			<div class = "searchAndProfileDiv">  
-				<div class="searchDiv"><button type="button" class="btn btn-primary btnSearch" onclick="document.location.href='Search.html'">Search</button></div>
-				<div class="profileDiv">
-					<div class="dropdown">
-    					<button class="btn btn-primary dropdown-toggle btnDropdown" type="button" data-toggle="dropdown">Profile<span class="caret"></span></button>
-   						<ul class="dropdown-menu">
-      						<li><a href="#">Manage</a></li>
-      						<li><a href="#">Logout</a></li>
-						</ul>
+				<div class="searchDiv"><button type="button" class="btn btn-primary btnSearch" onclick="document.location.href='search/'">Search</button></div>
+				<form name="profile" id="profile-form" action="." method="post" role="form">{% csrf_token %}
+					<div class="profileDiv">
+						<div class="dropdown">
+	    					<button class="btn btn-primary dropdown-toggle btnDropdown" type="button" data-toggle="dropdown">Profile<span class="caret"></span></button>
+	   						<ul class="dropdown-menu">
+	   							<div class="manageDiv">
+	   								<button type="button" class="btn btn-primary btnManage" onclick="document.location.href='../profile/'">Manage</button></div>
+	      						<!-- <li><a href="#">Manage</a></li> -->
+	      						<div class="manageDiv">
+	   								<button type="button" class="btn btn-primary btnManage" onclick="document.location.href='/'">Logout</button></div>
+	      						<!-- <li><a href="#">Logout</a></li> -->
+							</ul>
+						</div>
 					</div>
-				</div>
+				</form>
 			</div>
 			<div class="recentlyViewedDiv">
 				<button type="button" class="btn btn-info btnRecentlyViewed" data-toggle="collapse" data-target="#demo">Recently Viewed</button>
-	    		<div id="demo" class="collapse"> SOME IMAGES</div>
+	    		<div id="demo" class="collapse" style = "color : white"> SOME IMAGES</div>
 			</div>
 			<div class="wishListDiv">
 				<button type="button" class="btn btn-info btnWishList" data-toggle="collapse" data-target="#wish">Wish List</button>
-	    		<div id="wish" class="collapse"> ddcbsbhdc</div>
+	    		<div id="wish" class="collapse" style = "color : white"> ddcbsbhdc</div>
 			</div>
 			<div class="latestArrivalDiv">
 				<button type="button" class="btn btn-info btnLatestArrival" data-toggle="collapse" data-target="#latest">Latest Arraival</button>
-	    		<div id="latest" class="collapse"> scbdhb</div>
+	    		<div id="latest" class="collapse" style = "color : white"> scbdhb</div>
 			</div>
-		</div>                                     
+		</div>
+            
+                                
 	</body>
 </html>

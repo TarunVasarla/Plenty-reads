@@ -3,14 +3,14 @@
     
 {% load staticfiles %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'mybooks/bootstrap.min.css' %}" />
-<link rel="stylesheet" type="text/css" href="{% static 'mybooks/isotope.css' %}" />
-<link rel="stylesheet" type="text/css" href="{% static 'mybooks/jquery.fancybox.css' %}" />
-<link rel="stylesheet" type="text/css" href="{% static 'mybooks/loginandsignup.css' %}" />
-<link rel="stylesheet" type="text/css" href="{% static 'mybooks/da-slider.css' %}" />
-<link rel="stylesheet" type="text/css" href="{% static 'mybooks/styles.css' %}" />
-<link rel="stylesheet" type="text/css" href="{% static 'mybooks/owl.carousel.css' %}" />
-<link rel="stylesheet" type="text/css" href="{% static 'mybooks/font-awesome.min.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'mybooks/css/bootstrap.min.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'mybooks/css/isotope.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'mybooks/css/jquery.fancybox.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'mybooks/css/loginandsignup.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'mybooks/css/da-slider.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'mybooks/css/styles.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'mybooks/css/owl.carousel.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'mybooks/css/font-awesome.min.css' %}" />
 
  <script src="{% static 'mybooks/js/modernizr-latest.js' %}"></script>
     <script src="{% static 'mybooks/js/jquery-1.8.2.min.js' %}"></script>
@@ -36,7 +36,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="#" class="navbar-brand scroll-top logo"><b>PlentyReads</b></a>
+                    <a href="#" class="navbar-brand scroll-top logo" style = "font-size : 50pt"><b>PlentyReads</b></a>
                 </div>
                 <!--/.navbar-header-->
               
@@ -69,36 +69,14 @@
                 <div class="col-lg-12">
 
                   {% if form.errors %}
-                  <p>Your username and password didn't match. Please try again.</p>
+                  <p><font color="red">sorry! The email is aready taken</font></p>
                   {% endif %}
                 
-
-                        <form id="register-form" action="." method="post" role="form" >{% csrf_token %}
-                 
-                      <!-- <div class="form-group">
-                          <label> UserName</label>
-                        <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" required>
-                        {{ form.username }} 
-                      </div>
-                      <div class="form-group">
-                        <label> Email</label>
-                        <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="" required>
-                         {{ form.email }}  
-                      </div>
-                       <div class="form-group">
-                          <label>Password</label>
-                        <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required>
-                        {{ form.password1 }}  
-                      </div>
-                      <div class="form-group">
-                        <label>Confirm Password</label>
-                        <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password" required>
-                        {{ form.password2 }}  
-                      </div>  -->
+                   <form id="register-form" action="." method="post" role="form" >{% csrf_token %}
                       <table >
                           <tr>
                               <td><label style = "color : green" >UserName&nbsp&nbsp</label></td>
-                              <td><label >{{form.username }}</label></td>
+                              <td><label >{{form.name }}</label></td>
                           </tr>
                           <tr>
                             <td><label style = "color : green">Email&nbsp&nbsp</label></td>
@@ -106,11 +84,11 @@
                           </tr>
                           <tr>
                             <td><label style = "color : green">Password&nbsp&nbsp</label></td>
-                            <td><label>{{ form.password1 }}</label></td>
+                            <td><label>{{ form.password }}</label></td>
                           </tr>
                           <tr>
-                            <td><label style = "color : green">Confirm Password&nbsp&nbsp</label></td>
-                            <td><label>{{form.password2}}</label></td>
+                           <!--  <td><label style = "color : green">Confirm Password&nbsp&nbsp</label></td>
+                            <td><label>{{form.password2}}</label></td> -->
                           </tr>
                       </table>
                       <div class="form-group">
@@ -122,6 +100,7 @@
                       </div>
                     </form>
                      <a href="/">Home</a>
+                        
         
 
                   </div>
@@ -145,3 +124,4 @@
 
 
 
+   

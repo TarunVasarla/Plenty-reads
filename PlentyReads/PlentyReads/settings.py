@@ -84,10 +84,10 @@ WSGI_APPLICATION = 'PlentyReads.wsgi.application'
 
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'mysql.connector.django',
-#         'NAME': 'booksbase',
-#         'USER': 'shiva',
-#         'PASSWORD':'Shiva@503',
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'myrecord',
+#         'USER': 'root',
+#         'PASSWORD':'hiyuvi666',
 #     }
 # }
 DATABASES = {

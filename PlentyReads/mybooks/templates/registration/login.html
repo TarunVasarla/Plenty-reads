@@ -35,7 +35,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="#" class="navbar-brand scroll-top logo"><b>PlentyReads</b></a>
+                    <a href="#" class="navbar-brand scroll-top logo"  style = "font-size : 50pt"><b>PlentyReads</b></a>
                 </div>
                 <!--/.navbar-header-->
                 <div id="main-nav" class="collapse navbar-collapse">
@@ -44,7 +44,7 @@
                      
                        
                         <li><a href="#books" class="scroll-link">Books</a></li>
-                        <li><a href="#loginandsignup" class="scroll-link">Login/SignUp</a></li>
+                        <li><a href="#loginandsignup" class="scroll-link">Login/Register</a></li>
 
                         <li><a href="#contactUs" class="scroll-link">Contact Us</a></li>
                     </ul>
@@ -92,6 +92,14 @@
                             <img src="{% static 'mybooks/images/angelsDemons.jpg' %}" alt="banner" />
                         </div>
                     </div>
+                    <div class="da-slide">
+                        <h2>How about a sin</h2>
+                        <p> Novoneel Chakraborty</p>
+                        <div class="da-img">
+                            <img src="{% static 'mybooks/images/how about a sin.jpg' %}" alt="banner" />
+                        </div>
+                    </div>
+
                     <nav class="da-arrows">
                         <span class="da-arrows-prev"></span>
                         <span class="da-arrows-next"></span>
@@ -106,30 +114,76 @@
             <div class="heading text-center">
                 <!-- Heading -->
                 <h2>Books</h2>
-                <p>A room without books is like a body without a soul. ― Marcus Tullius Cicero</p>
+                <p>A room without books is like a body without a soul.</p>
             </div>
 
             <div class="row">
                 <nav id="filter" class="col-md-12 text-center">
                     <ul>
                         <li><a href="#" class="current btn-theme btn-small" data-filter="*">All</a></li>
-                        <li><a href="#" class="btn-theme btn-small" data-filter=".historicalFiction">Historical Fiction</a></li>
-                        <li><a href="#" class="btn-theme btn-small" data-filter=".memoirAuto">Memoir & Autobiography</a></li>
-                        <li><a href="#" class="btn-theme btn-small" data-filter=".historyBio">History & Biography</a></li>
+                        <li><a href="#" class="btn-theme btn-small" data-filter=".historicalFiction">Fiction</a></li>
+                        <li><a href="#" class="btn-theme btn-small" data-filter=".memoirAuto">Autobiography</a></li>
+                        <li><a href="#" class="btn-theme btn-small" data-filter=".historyBio">Biography</a></li>
                         <li><a href="#" class="btn-theme btn-small" data-filter=".romance">Romance</a></li>
+                        <li><a href="#" class="btn-theme btn-small" data-filter=".Love">Love</a></li>
+                        <li><a href="#" class="btn-theme btn-small" data-filter=".Thriller">Thriller</a></li>
                     </ul>
                 </nav>
                 <div class="col-md-12">
                     <div class="row">
                         <div class="portfolio-items isotopeWrapper clearfix" id="3">
+
+                            <article class="col-sm-4 isotopeItem Love">
+                                <div class="portfolio-item">
+                                    <img src="{% static 'mybooks/images/canlovehappentwice.jpg' %}" alt="" />
+                                    <div class="portfolio-desc align-center">
+                                        <div class="folio-info">
+                                            <img src="{% static 'mybooks/images/canlovehappentwice.jpg' %}" class="fancybox">
+                                                <!-- <h5>Project Title</h5> -->
+                                                <!-- <i class="fa fa-link fa-2x"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="col-sm-4 isotopeItem Thriller">
+                                <div class="portfolio-item">
+                                    <img src="{% static 'mybooks/images/marry-me-stranger.jpg' %}" alt="" />
+                                    <div class="portfolio-desc align-center">
+                                        <div class="folio-info">
+                                            <img src="{% static 'mybooks/images/marry-me-stranger.jpg' %}" class="fancybox">
+                                                <!-- <h5>Project Title</h5> -->
+                                                <!-- <i class="fa fa-link fa-2x"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="col-sm-4 isotopeItem Thriller">
+                                <div class="portfolio-item">
+                                    <img src="{% static 'mybooks/images/allyoursstranger.jpg' %}" alt="" />
+                                    <div class="portfolio-desc align-center">
+                                        <div class="folio-info">
+                                            <img src="{% static 'mybooks/images/allyoursstranger.jpg' %}" class="fancybox">
+                                                <!-- <h5>Project Title</h5> -->
+                                                <!-- <i class="fa fa-link fa-2x"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+
+
+
+
                             <article class="col-sm-4 isotopeItem historyBio">
                                 <div class="portfolio-item">
                                     <img src="{% static 'mybooks/images/historyBio/24886732.jpg' %}" alt="" />
                                     <div class="portfolio-desc align-center">
                                         <div class="folio-info">
                                             <img src="{% static 'mybooks/images/historyBio/24886732.jpg' %}" class="fancybox">
-                                                <h5>Project Title</h5>
-                                                <i class="fa fa-link fa-2x"></i></a>
+                                                <!-- <h5>Project Title</h5> -->
+                                                <!-- <i class="fa fa-link fa-2x"></i></a> -->
                                         </div>
                                     </div>
                                 </div>
@@ -140,32 +194,32 @@
                                     <div class="portfolio-desc align-center">
                                         <div class="folio-info">
                                             <a href="{% static 'mybooks/images/historyBio/25363342.jpg' %}" class="fancybox">
-                                                <h5>Project Title</h5>
-                                                <i class="fa fa-link fa-2x"></i></a>
+                                                <!-- <h5>Project Title</h5> -->
+                                                <!-- <i class="fa fa-link fa-2x"></i></a> -->
                                         </div>
                                     </div>
                                 </div>
                             </article>
                              <article class="col-sm-4 isotopeItem historyBio">
                                 <div class="portfolio-item">
-                                    <img src="{% static 'mybooks/images/historyBio/25494504.jpg' %}" alt="" />
+                                    <img src="{% static 'mybooks/images/stevejobs.jpg' %}" alt="" />
                                     <div class="portfolio-desc align-center">
                                         <div class="folio-info">
-                                            <a href="{% static 'mybooks/images/historyBio/25494504.jpg' %}" class="fancybox">
-                                                <h5>Project Title</h5>
-                                                <i class="fa fa-link fa-2x"></i></a>
+                                            <a href="{% static 'mybooks/images/stevejobs' %}" class="fancybox">
+                                                <!-- <h5>Project Title</h5> -->
+                                                <!-- <i class="fa fa-link fa-2x"></i></a> -->
                                         </div>
                                     </div>
                                 </div>
                             </article>                           
                             <article class="col-sm-4 isotopeItem memoirAuto">
                                 <div class="portfolio-item">
-                                    <img src="{% static 'mybooks/images/Memoir & Autobiography/25111132.jpg' %}" alt="" />
+                                    <img src="{% static 'mybooks/images/ben-franklin_cover.jpg' %}" alt="" />
                                     <div class="portfolio-desc align-center">
                                         <div class="folio-info">
-                                            <a href="{% static 'mybooks/images/Memoir & Autobiography/25111132.jpg' %}" class="fancybox">
-                                                <h5>Project Title</h5>
-                                                <i class="fa fa-link fa-2x"></i></a>
+                                            <a href="{% static 'mybooks/images/ben-franklin_cover.jpg' %}" class="fancybox">
+                                                <!-- <h5>Project Title</h5> -->
+                                                <!-- <i class="fa fa-link fa-2x"></i></a> -->
                                         </div>
                                     </div>
                                 </div>
@@ -173,24 +227,24 @@
 
                             <article class="col-sm-4 isotopeItem memoirAuto">
                                 <div class="portfolio-item">
-                                    <img src="{% static 'mybooks/images/Memoir & Autobiography/25387589.jpg' %}" alt="" />
+                                    <img src="{% static 'mybooks/images/Gandhi-Autobiography-cover.jpg' %}" alt="" />
                                     <div class="portfolio-desc align-center">
                                         <div class="folio-info">
-                                            <a href="{% static 'mybooks/images/Memoir & Autobiography/25387589.jpg' %}" class="fancybox">
-                                                <h5>Project Title</h5>
-                                                <i class="fa fa-link fa-2x"></i></a>
+                                            <a href="{% static 'mybooks/images/Gandhi-Autobiography-cover.jpg' %}" class="fancybox">
+                                                <!-- <h5>Project Title</h5> -->
+                                                <!-- <i class="fa fa-link fa-2x"></i></a> -->
                                         </div>
                                     </div>
                                 </div>
                             </article>
                             <article class="col-sm-4 isotopeItem memoirAuto">
                                 <div class="portfolio-item">
-                                    <img src="{% static 'mybooks/images/Memoir & Autobiography/25622135.jpg' %}" alt="" />
+                                    <img src="{% static 'mybooks/images/The_Autobiography_of_Abraham_Lincoln.jpg' %}" alt="" />
                                     <div class="portfolio-desc align-center">
                                         <div class="folio-info">
-                                            <a href="{% static 'mybooks/images/Memoir & Autobiography/25622135.jpg' %}" class="fancybox">
-                                                <h5>Project Title</h5>
-                                                <i class="fa fa-link fa-2x"></i></a>
+                                            <a href="{% static 'mybooks/images/The_Autobiography_of_Abraham_Lincoln.jpg' %}" class="fancybox">
+                                                <!-- <h5>Project Title</h5> -->
+                                                <!-- <i class="fa fa-link fa-2x"></i></a> -->
                                         </div>
                                     </div>
                                 </div>
@@ -198,49 +252,36 @@
 
                             <article class="col-sm-4 isotopeItem historicalFiction">
                                 <div class="portfolio-item">
-                                    <img src="{% static 'mybooks/images/historicalFiction/24611571.jpg' %}" alt="" />
+                                    <img src="{% static 'mybooks/images/nothing lasts.jpg' %}" alt="" />
                                     <div class="portfolio-desc align-center">
                                         <div class="folio-info">
-                                            <a href="{% static 'mybooks/images/historicalFiction/24611571.jpg' %}" class="fancybox">
-                                                <h5>Project Title</h5>
-                                                <i class="fa fa-link fa-2x"></i></a>
+                                            <a href="{% static 'mybooks/images/nothing lasts.jpg' %}" class="fancybox">
+                                                <!-- <h5>Project Title</h5> -->
+                                                <!-- <i class="fa fa-link fa-2x"></i></a> -->
                                         </div>
                                     </div>
                                 </div>
                             </article>
                             <article class="col-sm-4 isotopeItem historicalFiction">
                                 <div class="portfolio-item">
-                                    <img src="{% static 'mybooks/images/historicalFiction/24819449.jpg' %}" alt="" />
+                                    <img src="{% static 'mybooks/images/MitchAlbom_TheFivePeopleYouMeetInHeaven.jpg' %}" alt="" />
                                     <div class="portfolio-desc align-center">
                                         <div class="folio-info">
-                                            <a href="{% static 'mybooks/images/historicalFiction/24819449.jpg' %}" class="fancybox">
-                                                <h5>Project Title</h5>
-                                                <i class="fa fa-link fa-2x"></i></a>
+                                            <a href="{% static 'mybooks/images/MitchAlbom_TheFivePeopleYouMeetInHeaven.jpg' %}" class="fancybox">
+                                                <!-- <h5>Project Title</h5> -->
+                                                <!-- <i class="fa fa-link fa-2x"></i></a> -->
                                         </div>
                                     </div>
                                 </div>
                             </article>
                             <article class="col-sm-4 isotopeItem historicalFiction">
                                 <div class="portfolio-item">
-                                    <img src="{% static 'mybooks/images/historicalFiction/25203346.jpg' %}" alt="" />
+                                    <img src="{% static 'mybooks/images/All things are light.jpg' %}" alt="" />
                                     <div class="portfolio-desc align-center">
                                         <div class="folio-info">
-                                            <a href="{% static 'mybooks/images/historicalFiction/25203346.jpg' %}" class="fancybox">
-                                                <h5>Project Title</h5>
-                                                <i class="fa fa-link fa-2x"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <article class="col-sm-4 isotopeItem historicalFiction">
-                                <div class="portfolio-item">
-                                     <img src="{% static 'mybooks/images/historicalFiction/25422234.jpg' %}" alt="" />
-                                    <div class="portfolio-desc align-center">
-                                        <div class="folio-info">
-                                            <a href="{% static 'mybooks/images/historicalFiction/25422234.jpg' %}" class="fancybox">
-                                                <h5>Project Title</h5>
-                                                <i class="fa fa-link fa-2x"></i></a>
+                                            <a href="{% static 'mybooks/images/All things are light.jpg' %}" class="fancybox">
+                                                <!-- <h5>Project Title</h5> -->
+                                                <!-- <i class="fa fa-link fa-2x"></i></a> -->
                                         </div>
                                     </div>
                                 </div>
@@ -248,12 +289,25 @@
 
                             <article class="col-sm-4 isotopeItem historicalFiction">
                                 <div class="portfolio-item">
-                                    <img src="{% static 'mybooks/images/historicalFiction/25816988.jpg' %}" alt="" />
+                                     <img src="{% static 'mybooks/images/The-Alchemist.jpg' %}" alt="" />
                                     <div class="portfolio-desc align-center">
                                         <div class="folio-info">
-                                            <a href="{% static 'mybooks/images/historicalFiction/25816988.jpg' %}" class="fancybox">
-                                                <h5>Project Title</h5>
-                                                <i class="fa fa-link fa-2x"></i></a>
+                                            <a href="{% static 'mybooks/images/The-Alchemist.jpg' %}" class="fancybox">
+                                                <!-- <h5>Project Title</h5> -->
+                                                <!-- <i class="fa fa-link fa-2x"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="col-sm-4 isotopeItem historicalFiction">
+                                <div class="portfolio-item">
+                                    <img src="{% static 'mybooks/images/angelsDemons.jpg' %}" alt="" />
+                                    <div class="portfolio-desc align-center">
+                                        <div class="folio-info">
+                                            <a href="{% static 'mybooks/images/angelsDemons.jpg' %}" class="fancybox">
+                                                <!-- <h5>Project Title</h5> -->
+                                                <!-- <i class="fa fa-link fa-2x"></i></a> -->
                                         </div>
                                     </div>
                                 </div>
@@ -264,20 +318,20 @@
                                     <div class="portfolio-desc align-center">
                                         <div class="folio-info">
                                             <a href="{% static 'mybooks/images/romance/24431358.jpg' %}" class="fancybox">
-                                                <h5>Project Title</h5>
-                                                <i class="fa fa-link fa-2x"></i></a>
+                                                <!-- <h5>Project Title</h5> -->
+                                                <!-- <i class="fa fa-link fa-2x"></i></a> -->
                                         </div>
                                     </div>
                                 </div>
                             </article>
                             <article class="col-sm-4 isotopeItem romance">
                                 <div class="portfolio-item">
-                                    <img src="{% static 'mybooks/images/romance/25135611.jpg' %}" alt="" />
+                                    <img src="{% static 'mybooks/images/how about a sin.jpg' %}" alt="" />
                                     <div class="portfolio-desc align-center">
                                         <div class="folio-info">
-                                            <a href="{% static 'images/romance/25135611.jpg' %}" class="fancybox">
-                                                <h5>Project Title</h5>
-                                                <i class="fa fa-link fa-2x"></i></a>
+                                            <a href="{% static 'images/how about a sin.jpg' %}" class="fancybox">
+                                                <!-- <h5>Project Title</h5> -->
+                                                <!-- <i class="fa fa-link fa-2x"></i></a> -->
                                         </div>
                                     </div>
                                 </div>
@@ -288,8 +342,8 @@
                                     <div class="portfolio-desc align-center">
                                         <div class="folio-info">
                                             <a href="{% static 'mybooks/images/romance/18336982.jpg' %}" class="fancybox">
-                                                <h5>Project Title</h5>
-                                                <i class="fa fa-link fa-2x"></i></a>
+                                                <!-- <h5>Project Title</h5> -->
+                                                <!-- <i class="fa fa-link fa-2x"></i></a> -->
                                         </div>
                                     </div>
                                 </div>
@@ -307,17 +361,16 @@
     <section id="loginandsignup" class="page-section section appear clearfix">
         <div class="container">
       <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-12 col-md-offset-0">
           <div class="panel panel-login">
             <div class="panel-heading">
               <div class="row">
-                <div class="col-xs-6" >
-                  <a href="#" class="active" style = "font-size : 25pt" id="login-form-link">Login</a>
+                <div class="col-xs-12" >
+                  <div style = "font-size : 25pt;margin-left :270pt" id="login-form-link">Login to explore yourself</div>
                 </div>
-                <div class="col-xs-6">
-                  <!-- <a href="#" id="register-form-link">Register</a> -->
-                  <a href="/register" class="active" style = "font-size : 25pt">Register</a>
-                </div>
+                <!-- <div class="col-xs-6">
+                  <a href="#" id="register-form-link">Register</a>
+                </div> -->
               </div>
               <hr>
             </div>
@@ -329,60 +382,26 @@
                   <p>Your username and password didn't match. Please try again.</p>
                   {% endif %}
                   <form name="login" id="login-form" action="." method="post" role="form" style="display: block;">{% csrf_token %}
-                      
-                     <!--  <table >
+                       <table>
                           <tr>
-                              <td><label style = "color : green" >UserName&nbsp&nbsp</label></td>
-                              <td><label >{{ form.username }}</label></td>
+                            <td><label style = "color : green;padding-left : 200pt">Enter Email&nbsp&nbsp</label></td>
+                            <td><label>{{form.email}}</label></td>
                           </tr>
                           <tr>
-                            <td><label style = "color : green" style = "padding-top : 15pt">Password&nbsp&nbsp</label></td>
-                            <td><label>{{ form.password }}</label></td>
-                          </tr>
-                      </table> -->
-                       <div class="form-group" style = "font-size : 25pt" >
-                        <!-- <input type="text" name="username" id="username" tabindex="2" class="form-control" placeholder="Username" value="" required> -->
-                         <table >
-                          <tr>
-                              <td><label style = "color : green" >UserName&nbsp&nbsp</label></td>
-                              <td><label >{{ form.username }}</label></td>
-                          </tr>
-                          <tr>
-                            <td><label style = "color : green" style = "padding-top : 15pt">Password&nbsp&nbsp</label></td>
+                            <td><label style = "color : green;padding-left : 200pt">Enter Password&nbsp&nbsp</label></td>
                             <td><label>{{ form.password }}</label></td>
                           </tr>
                       </table>
                       
-                      </div>
-                      
-                      <!-- <div class="form-group">
-                        <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" value="" required>
-                       {{ form.password }} 
-                      </div> -->
-                      
-                      <!-- <div class="form-group text-center">
-                        <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
-                        <label for="remember"> Remember Me</label>
-                      </div> -->
                       <div class="form-group">
                         <div class="row">
-                          <div class="col-sm-6 col-sm-offset-3" style = "padding-top : 15pt">
-                            <input type="submit"  name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In" >
+                          <div class="col-sm-6 col-sm-offset-3" style = "padding-top : 10pt">
+                            <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Let's Start Reading" >
                           </div>
                         </div>
                       </div>
-                      <div class="form-group">
-                        <div class="row">
-                          <div class="col-lg-12">
-                            <div class="text-center">
-                              <!-- <a href="http://" tabindex="5" class="forgot-password">Forgot Password?</a> -->
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <input type="hidden" name="next" value="/home" />
                     </form>
-                     <!-- <a href="/register">Register</a> -->
+                     <a href="/register" style = "font-size : 25pt">For Registration Click Me</a>
                   <table border="0">
         
 
@@ -396,7 +415,7 @@
     </section> 
 
 
-    <section id="contactUs" class="contact-parlex">
+    <section id="contactUs" class="contact-parlex" style = "padding-top : 25pt">
         <div class="parlex-back">
             <div class="container">
 
@@ -411,7 +430,7 @@
                 <div class="row mrgn30">
 
                     <form method="post" action="" id="contactfrm" role="form">
-
+<!-- 
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="name">Name</label>
@@ -429,19 +448,19 @@
                             </div>
                             <button name="submit" type="submit" class="btn btn-lg btn-primary" id="submit">Submit</button>
                             <div class="result"></div>
-                        </div>
+                        </div> -->
                     </form>
                     <div class="col-sm-4">
                         <h4>Address:</h4>
                         <address>
                             Plenty Reads<br>
                                 <br>
-                           IIIT Hyderabad
+                           Gachibowli, IIIT Hyderabad - 500032
                         <br>
                         </address>
                         <h4>Phone:</h4>
                         <address>
-                            12345-49589-2<br>
+                            +91-9848022338<br>
                         </address>
                     </div>
                 </div>
